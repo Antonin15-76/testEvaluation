@@ -1,0 +1,20 @@
+{
+  "search.exclude": {
+    ".git": true,
+    ".eslintcache": true,
+    "app/dist": true,
+    "app/main.prod.js": true,
+    "app/main.prod.js.map": true,
+    "bower_components": true,
+    "dll": true,
+    "flow-typed": true,
+    "C_Cpp.errorSquiggles": true,
+    "release": true,
+    "node_modules": true,
+    "npm-debug.log.*": true,
+    "test/**/__snapshots__": true,
+    "yarn.lock": true
+  },
+  "editor.tabSize": 2,
+  "standard.usePackageJson": true
+}

@@ -1,0 +1,38 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", { "loose": false }],
+    ["@babel/plugin-proposal-nullish-coalescing-operator", { "loose": false }],
+    ["@babel/plugin-proposal-optional-chaining", { "loose": false }],
+    [
+      "module-resolver", 
+      {
+        "root": ["./src"], 
+        "cwd": "packagejson" ,
+        "alias": {
+          "errors/": "./src/errors",
+          "schema": "./src/schema",
+          "utils/": "./src/utils",
+          "oldResolvers": "./src/oldResolvers",
+          "server/": "./src/server"
+        },
+        "extensions": [".js", ".jsx", ".es", ".es6", ".mjs", ".html", ".ejs", ".css"]
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "ignore": ["**/*.test.ts", "**/*.spec.ts", ".git", "node_modules", "migration"],
+  "watch": ["src"],
+  "ext": "js, gql",
+  "inspect": true,
+  "events": {
+      "restart": "echo \"[Warning] Remember run npm run test b4 push to dev branch !\""
+  }
+}
