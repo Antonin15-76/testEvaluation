@@ -1,15 +1,8 @@
 import { ObjectId } from 'mongodb'
 import { Kind, GraphQLList, GraphQLInt, GraphQLFloat, GraphQLBoolean, GraphQLString, GraphQLError } from 'graphql'
-// import { GraphQLDate, GraphQLDateTime, GraphQLTime } from 'graphql-iso-date'
-// import GraphQLJSON from 'graphql-type-json'
 import { scalarType, interfaceType, arg, inputObjectType } from 'nexus'
 import { GraphQLDate, GraphQLDateTime, GraphQLTime } from 'graphql-iso-date'
 import UnionInputType from 'graphql-union-input-type'
-// import { tryASTType, tryValue } from 'utils/utils'
-// import { loadFromLoader } from 'server/dataloaders'
-// // eslint-disable-next-line
-// import { NexusArgDef, NexusArgConfigType, NexusArgConfig, inputObjectType } from 'nexus/dist/core'
-// import { ApolloError } from 'apollo-server'
 import { GraphQLUpload } from 'graphql-upload'
 import { loadFromLoader } from 'server/dataloaders'
 import GraphQLJSON from 'graphql-type-json'
@@ -161,28 +154,6 @@ export const Node = interfaceType({
       nullable: false,
       resolve: obj => obj.updatedAt
     })
-    // t.field('createdBy', {
-    //   description: 'Créé par',
-    //   type: 'User',
-    //   nullable: true,
-    //   resolve: async (node, _, ctx) => {
-    //     if (node.createdBy) {
-    //       return loadFromLoader(ctx.loaders.userLoader, node.createdBy)
-    //     }
-    //     return null
-    //   }
-    // })
-    // t.field('updatedBy', {
-    //   description: 'Mise à Jour par',
-    //   type: 'User',
-    //   nullable: true,
-    //   resolve: async (node, _, ctx) => {
-    //     if (node.updatedBy) {
-    //       return loadFromLoader(ctx.loaders.userLoader, node.updatedBy)
-    //     }
-    //     return null
-    //   }
-    // })
   }
 })
 

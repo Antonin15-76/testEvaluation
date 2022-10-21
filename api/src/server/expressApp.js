@@ -12,21 +12,6 @@ const app = express()
 app.use(json())
 app.use(urlencoded({ extended: true }))
 
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', req.header('origin') || '*')
-//   res.setHeader('Vary', 'Origin')
-//   res.setHeader('Access-Control-Allow-Credentials', true)
-//   res.setHeader(
-//     'Access-Control-Allow-Headers',
-//     'Origin, X-Requested-With, Content-Type, Accept, cache-control, pragma, Authorization, TimeZone, locale, currentUser, currentclient'
-//   )
-//   if (req.method === 'OPTIONS') {
-//     res.status(200).send('')
-//     return
-//   }
-//   return next()
-// })
-
 const corsDelegate = (req, callback) => {
   const corsOptions = {
     credentials: true,

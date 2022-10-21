@@ -10,10 +10,7 @@ import { dbPromise } from '../utils'
  * @param {any} next
  */
 const verifyAuthentication = async (req, res, next) => {
-  // if (process.env.NODE_ENV === 'development') {
-  //   req.currentUser = (await (await dbPromise).collection('user').findOne({ username: 'vmetton@spha.fr' }))._id
-  //   return next()
-  // }
+
   const authHeader = req.header('Authorization') ?? null
   try {
   //   // On vérifie si le header est présent

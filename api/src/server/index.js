@@ -103,15 +103,6 @@ const pubsub = new PubSub()
 
 const defaultOptions = { useUnifiedTopology: true, useNewUrlParser: true }
 
-// export const mongoClientPromise = MongoClient.connect(process.env.MONGO_URL, defaultOptions)
-
-// export const server = getApolloServer(mongoClientPromise)
-
-// server.listen(process.env.PORT, () => {
-//   console.log(`🚀 Server ready running at http://localhost:${process.env.PORT}  `)
-//   console.log(`🚀 Playground ready running at http://localhost:${process.env.PORT}/graphql  `)
-// })
-
 /**
  * Fonction exécutée si un signal d'arrêt est détecté.
  */
