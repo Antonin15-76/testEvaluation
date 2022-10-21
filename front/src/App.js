@@ -1,28 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages'
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
+import Log from './pages/app/log'
+import Applayout from './Components/Applayout'
+import Subscribe from './pages/app/subscribe'
 
 function App() {
-  const client = new ApolloClient({
-      cache: new InMemoryCache(),
-      uri: "http://localhost:3001/"
-    })
-  return (
-    
-    
-    ReactDOM.render(
-      <ApolloProvider client={client}>
+ 
+    return (
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Log />} />
+            <Route path='/subscibe' element={<Subscribe />} />
+            {/* <Route path='/logout' element={<LogOut />} /> */}
+            <Route path='/app/*' element={<Applayout />} />
           </Routes>
         </BrowserRouter>
-      </ApolloProvider>,
-      document.getElementById('root'),
-    )
     
     // <div className="App">
     //   <header className="App-header">

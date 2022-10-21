@@ -1,7 +1,7 @@
 {
-  "name": "stats-api",
+  "name": "api",
   "version": "1.0.0",
-  "description": "stats-api GraphQL Server",
+  "description": "api GraphQL Server",
   "scripts": {
     "start": "cross-env NODE_ENV='production' node --icu-data-dir=node_modules/full-icu ./lib/index.js",
     "dev": "nodemon --icu-data-dir=node_modules/full-icu ./src/index.js",

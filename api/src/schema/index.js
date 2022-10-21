@@ -7,11 +7,13 @@
  import path from 'path'
  import test from './test'
  import * as globalNexusTypes from './globalNexusTypes'
+ import * as user from './user'
  
  const nexusSchema = makeSchema({
     plugins: [declarativeWrappingPlugin()],
    types: [
     ...Object.values(globalNexusTypes),
+    ...Object.values(user),
     ...test
    ],
  

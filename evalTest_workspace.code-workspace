@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "api"
+		},
+		{
+			"path": "front"
+		}
+		
+	],
+	"settings": {
+		"javascript.validate.enable": false,
+		"typescript.validate.enable": false,
+		"standard.enable": true,
+		"standard.usePackageJson": true,
+		"typescript.tsserver.experimental.enableProjectDiagnostics": true
+	}
+}
